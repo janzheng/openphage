@@ -24,8 +24,15 @@ const fetchConfigs = sheets.map(sheet => ({
   }
 }))
 
+
+const USE_CACHE = true
+
+// const CACHE_SECONDS = 60; // 60s * 60m * 24h // update every minute for testing
+const CACHE_SECONDS = 60 * 60; // 60s * 60m * 24h // update cache every hour for prod
+// const CACHE_SECONDS = 60 * 60 * 24; // 60s * 60m * 24h // update cache every day for prod
+
 // Semaphore with limit of 5 concurrent requests
-const sema = new Sema(1)
+const sema = new Sema(5)
 
 // Function to perform all the fetches
 const fetchAll = async (fetchConfigs, c) => {
@@ -35,12 +42,12 @@ const fetchAll = async (fetchConfigs, c) => {
     try {
       console.log(">>>> FETCHING", config)
       // Check if response is in cache
-      const cachedResponse = await c.env.CACHE.get(config.options.body)
+      let cachedResponse = USE_CACHE && await c.env.CACHE.get(config.options.body)
       if (!cachedResponse) {
         // If not in cache, fetch and store in cache
         response = await fetch(config.url, config.options)
         const data = await response.json()
-        await c.env.CACHE.put(config.options.body, JSON.stringify(data))
+        await c.env.CACHE.put(config.options.body, JSON.stringify(data), { expirationTtl: CACHE_SECONDS })
         response = data
       } else {
         response = JSON.parse(cachedResponse)
