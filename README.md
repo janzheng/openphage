@@ -1,7 +1,7 @@
 
 # Open Phage Data Sheet
 
-- Visit the site here: https://open.phage.directory
+Visit the site here: https://open.phage.directory
 
 This project is a public-facing, collaborativeGoogle Sheet project that collects information for various aspects in the phage academia space, like tools, grants, and clinical trials. 
 
@@ -13,20 +13,18 @@ Built with Hono (https://hono.dev/getting-started/cloudflare-workers) and deploy
 
 The Google Sheet "API" was made possible with [SpreadAPI](https://spreadapi.roombelt.com/setup), which is a free Google App Script that sets it up as a REST endpoint. This code uses Cloudflare Workers KV for caching.
 
-## Content
-
 ## Sections
 
 bioinformatics, clinical trials, events, lab tools, definitions, grants, resources, funding opportunities, volunteers
 
 * [bioinformatics](https://open.phage.directory#bioinformatics)
-* [clinical trials](https://open.phage.directory#clinicaltrials)
+* [clinical trials](https://open.phage.directory#clinical-trials)
 * [events](https://open.phage.directory#events)
-* [lab tools](https://open.phage.directory#labtools)
+* [lab tools](https://open.phage.directory#lab-tools)
 * [definitions](https://open.phage.directory#definitions)
 * [grants](https://open.phage.directory#grants)
 * [resources](https://open.phage.directory#resources)
-* [funding opportunities](https://open.phage.directory#fundingopportunities)
+* [funding opportunities](https://open.phage.directory#funding-opportunities)
 * [volunteers](https://open.phage.directory#volunteers)
 
 

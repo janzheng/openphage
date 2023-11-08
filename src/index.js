@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { Sema } from 'async-sema'
+import slugify from 'slugify'
 
 const app = new Hono()
 // const app = new Hono < { Bindings: Bindings } > ()
@@ -88,7 +89,7 @@ app.get('/', async (c) => {
 
       // Add table to tables string
       tables += `
-        <h2 id="${sheet}" class="text-2xl capitalize mb-8 mt-16">${sheet}</h2>
+        <h2 id="${slugify(sheet)}" class="text-2xl capitalize mb-8 mt-16">${sheet}</h2>
         <div class="overflow-x-auto">
           <table class="text-sm table-auto mx-auto max-w-3xl mx-auto">
             <thead>
@@ -121,7 +122,7 @@ app.get('/', async (c) => {
           <h2 class="text-2xl capitalize mb-8 mt-16">Table of Contents</h2>
           <ul>
             ${sheets.map(sheet => `
-              <li><a class="text-blue-500 cursor-pointer capitalize hover:underline" href="#${sheet}">${sheet}</a></li>
+              <li><a class="text-blue-500 cursor-pointer capitalize hover:underline" href="#${slugify(sheet)}">${sheet}</a></li>
             `).join('')}
           </ul>
         </div>
