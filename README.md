@@ -1,15 +1,19 @@
 
-# About
+# Open Phage Data Sheet
 
-This is a simple backend and wrapper to pull data from the Open Phage (Google) Data Sheet project: https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=818998992
+- Visit the site here: https://open.phage.directory
+
+This project is a public-facing, collaborativeGoogle Sheet project that collects information for various aspects in the phage academia space, like tools, grants, and clinical trials. 
+
+Collecting these links is currently user-generated, but once various resources are setup and listed (e.g. PubMed, clinicaltrials.gov) we can start automating the process.
+
+The code in this repo is a simple backend and wrapper to pull data from the Google Sheet: https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=818998992
 
 Built with Hono (https://hono.dev/getting-started/cloudflare-workers) and deployed on Cloudflare Workers.
 
 The Google Sheet "API" was made possible with [SpreadAPI](https://spreadapi.roombelt.com/setup), which is a free Google App Script that sets it up as a REST endpoint. This code uses Cloudflare Workers KV for caching.
 
 ## Content
-
-The Google Sheet is completely open, and meant to be a collaborative project. Once various resources are setup and listed (e.g. PubMed, clinicaltrials.gov) then we can use Assistants to automatically pull information. But for now, this process is still manual and user-generated.
 
 ## Sections
 
