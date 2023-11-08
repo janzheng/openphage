@@ -3,7 +3,7 @@
 
 Visit the site here: https://open.phage.directory
 
-This project is a public-facing, collaborativeGoogle Sheet project that collects information for various aspects in the phage academia space, like tools, grants, and clinical trials. 
+This project is a public-facing, collaborative Google Sheet project that collects information for phage academia, like tools, grants, and clinical trials. 
 
 Collecting these links is currently user-generated, but once various resources are setup and listed (e.g. PubMed, clinicaltrials.gov) we can start automating the process.
 
