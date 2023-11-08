@@ -88,7 +88,7 @@ app.get('/', async (c) => {
 
       // Add table to tables string
       tables += `
-        <h2 class="text-2xl capitalize m-8 mt-16">${sheet}</h2>
+        <h2 id="${sheet}" class="text-2xl capitalize mb-8 mt-16">${sheet}</h2>
         <div class="overflow-x-auto">
           <table class="text-sm table-auto mx-auto max-w-3xl mx-auto">
             <thead>
@@ -116,7 +116,15 @@ app.get('/', async (c) => {
         <p class="text-gray-700 pb-3">This data sheet is cached + generated from the original Open Phage Google Sheet. Please contribute if you can! Every bit helps! <a class="text-blue-500 cursor-pointer hover:underline" href="https://open.phage.directory/sheet">https://open.phage.directory/sheet</a> <br><span class="text-sm">(Original Google sheets link: <a class="text-blue-500 cursor-pointer hover:underline" href="https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=1571383366">https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=1571383366</a> ).</span></p>
         <p class="text-gray-700 pb-3">To access the data (for bioinformatics, scraping, LLMs, etc.) use: <a class="text-blue-500 cursor-pointer hover:underline" href="https://open.phage.directory/api">https://open.phage.directory/api</a> — the results are updated and cached every so often.</p>
         <p class="text-gray-700 pb-3">Code can be found at: <a class="text-blue-500 cursor-pointer hover:underline" href="https://github.com/janzheng/openphage">https://github.com/janzheng/openphage</a> — the results are updated and cached every so often. This project relies on Hono and SpreadAPI to work.</p>
+        <p class="text-gray-700 pb-3">Code can be found at: <a class="text-blue-500 cursor-pointer hover:underline" href="https://github.com/janzheng/openphage">https://github.com/janzheng/openphage</a> — the results are updated and cached every so often. This project relies on Hono and SpreadAPI to work.</p>
         <div class="max-w-3xl mx-auto">
+          <h2 class="text-2xl capitalize mb-8 mt-16">Table of Contents</h2>
+          <ul>
+            ${sheets.map(sheet => `
+              <li><a class="text-blue-500 cursor-pointer capitalize hover:underline" href="#${sheet}">${sheet}</a></li>
+            `).join('')}
+          </ul>
+        </div>
           ${tables}
         </div>
       </body>

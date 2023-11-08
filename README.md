@@ -7,6 +7,31 @@ Built with Hono (https://hono.dev/getting-started/cloudflare-workers) and deploy
 
 The Google Sheet "API" was made possible with [SpreadAPI](https://spreadapi.roombelt.com/setup), which is a free Google App Script that sets it up as a REST endpoint. This code uses Cloudflare Workers KV for caching.
 
+## Content
+
+The Google Sheet is completely open, and meant to be a collaborative project. Once various resources are setup and listed (e.g. PubMed, clinicaltrials.gov) then we can use Assistants to automatically pull information. But for now, this process is still manual and user-generated.
+
+## Sections
+
+bioinformatics, clinical trials, events, lab tools, definitions, grants, resources, funding opportunities, volunteers
+
+* [bioinformatics](https://open.phage.directory#bioinformatics)
+* [clinical trials](https://open.phage.directory#clinicaltrials)
+* [events](https://open.phage.directory#events)
+* [lab tools](https://open.phage.directory#labtools)
+* [definitions](https://open.phage.directory#definitions)
+* [grants](https://open.phage.directory#grants)
+* [resources](https://open.phage.directory#resources)
+* [funding opportunities](https://open.phage.directory#fundingopportunities)
+* [volunteers](https://open.phage.directory#volunteers)
+
+
+
+
+
+
+
+
 
 ## Installing
 

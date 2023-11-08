@@ -1,6 +1,7 @@
 {
   "scripts": {
     "dev": "wrangler dev src/index.js",
+    "commit": "git add . -A ; git commit; git push origin main",
     "deploy": "wrangler deploy --minify src/index.js"
   },
   "dependencies": {
