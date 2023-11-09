@@ -15,7 +15,7 @@ The Google Sheet "API" was made possible with [SpreadAPI](https://spreadapi.room
 
 ## Sections & Schemas
 
-We've added the following sections (more can be added!):
+We've added the following sections (these links go to the project page):
 
 * [bioinformatics](https://open.phage.directory#bioinformatics)
 * [clinical trials](https://open.phage.directory#clinical-trials)
@@ -25,7 +25,7 @@ We've added the following sections (more can be added!):
 * [grants](https://open.phage.directory#grants)
 * [resources](https://open.phage.directory#resources)
 * [funding opportunities](https://open.phage.directory#funding-opportunities)
-* [volunteers](https://open.phage.directory#volunteers)
+* [contributors](https://open.phage.directory#contributors)
 
 And here are the respective schemas (this is useful for automation in the future, esp. with something like Assistants)
 
@@ -188,9 +188,9 @@ This section details available funding opportunities such as awards, scholarship
 - `URL`: A link to more information or to apply for the funding opportunity.
 
 
-### volunteers
+### contributors
 
-This section is for volunteers that add items to the project. Anyone can volunteer!
+This section is for contributors that add items to the project. Anyone can volunteer!
 
 #### Data Schema Description
 

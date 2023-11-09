@@ -7,7 +7,7 @@ const app = new Hono()
 
 // Define an array of sheet names
 // const sheets = ["bioinformatics"]
-const sheets = ["bioinformatics", "clinical trials", "events", "lab tools", "definitions", "grants", "resources", "funding opportunities", "volunteers"]
+const sheets = ["Bioinformatics", "Clinical Trials", "Events", "Lab Tools", "Definitions", "Grants", "Resource Library", "Funding Opportunities", "Contributors"]
 
 // Generate an array of POST fetch configurations for each sheet
 const fetchConfigs = sheets.map(sheet => ({
@@ -123,7 +123,6 @@ app.get('/', async (c) => {
         <h1 class="text-4xl text-center pb-3">Open Phage Data Sheet</h1>
         <p class="text-gray-700 pb-3">This data sheet is cached + generated from the original Open Phage Google Sheet. Please contribute if you can! Every bit helps! <a class="text-blue-500 cursor-pointer hover:underline" href="https://open.phage.directory/sheet">https://open.phage.directory/sheet</a> <br><span class="text-sm">(Original Google sheets link: <a class="text-blue-500 cursor-pointer hover:underline" href="https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=1571383366">https://docs.google.com/spreadsheets/d/1fhBigiisdCc8-YWD4K8U6yvXK47p67KzA7JfAWsh-Iw/edit#gid=1571383366</a> ).</span></p>
         <p class="text-gray-700 pb-3">To access the data (for bioinformatics, scraping, LLMs, etc.) use: <a class="text-blue-500 cursor-pointer hover:underline" href="https://open.phage.directory/api">https://open.phage.directory/api</a> — the results are updated and cached every so often.</p>
-        <p class="text-gray-700 pb-3">Code can be found at: <a class="text-blue-500 cursor-pointer hover:underline" href="https://github.com/janzheng/openphage">https://github.com/janzheng/openphage</a> — the results are updated and cached every so often. This project relies on Hono and SpreadAPI to work.</p>
         <p class="text-gray-700 pb-3">Code can be found at: <a class="text-blue-500 cursor-pointer hover:underline" href="https://github.com/janzheng/openphage">https://github.com/janzheng/openphage</a> — the results are updated and cached every so often. This project relies on Hono and SpreadAPI to work.</p>
         <div class="max-w-3xl mx-auto">
           <h2 class="text-2xl capitalize mb-8 mt-16">Table of Contents</h2>
